@@ -1,0 +1,12 @@
+<script>
+    let duzia = 1.30;
+    let unidade = 1;
+    
+    let macas = parseFloat(prompt("Digite o numero de maçãs: "));
+    if (macas < 12) {
+     valorTotal = macas * duzia;
+    } else {
+     valorTotal = macas * unidade;
+}
+    document.write (`<h1>O total das compras é: R$${valorTotal.toFixed(2)}</h1>`); 
+</script>

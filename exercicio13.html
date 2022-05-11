@@ -1,0 +1,17 @@
+<script>
+    let idade = parseFloat(prompt("Digite sua idade: "));
+    let sexo = prompt("Digite seu sexo: ").toLowerCase();
+    let condicao = prompt("Tem alguma condição especial? qual(gestante ou deficiente)").toLowerCase();
+    
+      if (idade >= 60) {
+        document.write(`<h2>VOCÊ É IDOSO, FILA PREFERENCIAL!</h2>`);
+      } else if (condicao === "deficiente") {
+        document.write(`<h2>VOCÊ É DEFICIENTE, FILA PREFERENCIAL!</h2>`);
+      } else if (sexo === "feminino" && condicao === "gestante") {
+        document.write(`<h2>VOCÊ É GESTANTE, FILA PREFERENCIAL!</h2>`);
+      }else if( sexo === "masculino" && condicao === "gestante") {
+          document.write(`<h2>DADOS INVÁLIDOS!</h2>`)  
+      } else {
+        document.write(`<h2>VOCÊ NÃO TEM CONDIÇÃO ESPECIAL, FILA NORMAL!</h2>`);
+      }
+    </script>

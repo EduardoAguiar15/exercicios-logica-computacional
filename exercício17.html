@@ -1,0 +1,11 @@
+<script>
+     let moedaDe1Cent = parseFloat(prompt("Quantas moedas de 1 centavo você tem?"));
+     let moedaDe5Cent = parseFloat(prompt("Quantas moedas de 5 centavo você tem?"));
+     let moedaDe10Cent = parseFloat(prompt("Quantas moedas de 10 centavo você tem?"));
+     let moedaDe25Cent = parseFloat(prompt("Quantas moedas de 25 centavo você tem?"));
+     let moedaDe50Cent = parseFloat(prompt("Quantas moedas de 50 centavo você tem?"));
+     let moedaDe1real = parseFloat(prompt("Quantas moedas de 1 real você tem?"));
+     let valorTotal = (moedaDe1Cent* 0.01) + (moedaDe5Cent*0.05) + (moedaDe10Cent*0.10) + (moedaDe25Cent*0.25) + (moedaDe50Cent*0.50) + (moedaDe1real*1);
+     document.write(`<h1>Pedrinho juntou R$${valorTotal.toFixed(2)} </h1>`);
+
+</script>

@@ -1,0 +1,9 @@
+<script>
+    const percentualDoDistribuidor = 28;
+    const impostos = 45;
+    const custoDeFabrica = parseFloat(prompt("Qual o custo de Fabrica?"));
+const custoDoCarroNovo = impostos + percentualDoDistribuidor;
+const custoDoCarroNovo2 = custoDeFabrica * (custoDoCarroNovo /100);
+const custofinal = custoDeFabrica + custoDoCarroNovo2;
+document.write(`<h1>O custo do carro novo é: R$${custofinal}</h1>`);
+</script>

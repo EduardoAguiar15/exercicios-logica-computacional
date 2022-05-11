@@ -1,0 +1,37 @@
+<script>
+    // Faça um programa que recebe três números do usuário, e identifica o maior através de uma função e o menor número através de outra função.
+    
+  let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+  let numero2 = parseFloat(prompt("Digite o segundo número:"));
+  let numero3 = parseFloat(prompt("Digite o terceiro número:"));
+
+  let array = [numero1, numero2, numero3];
+
+  function retornaMaiorNumero(array) {
+    let maiorNumero = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > maiorNumero) {
+        maiorNumero = array[i];
+      }
+    }
+
+    return maiorNumero;
+  }
+
+  function retornaMenorNumero(array) {
+    let menorNumero = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < menorNumero) {
+        menorNumero = array[i];
+      }
+    }
+
+    return menorNumero;
+  }
+
+  document.write(
+    `<h1> O menor número é ${retornaMenorNumero(
+      array
+    )} e o maior número é ${retornaMaiorNumero(array)}</h1>`
+  );
+</script>

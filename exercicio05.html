@@ -1,0 +1,11 @@
+<script>
+    let anoAtual = parseFloat(prompt("Digite o ano atual: "));
+    let anoDeNascimento = parseFloat(prompt("Digite o ano de Nascimento: "));
+    
+    let idade = anoAtual - anoDeNascimento;
+    if (idade < 16) {
+        document.write ("NÃO PODE VOTAR!")
+    } else {
+        document.write ("PODE VOTAR!")
+    }
+</script>

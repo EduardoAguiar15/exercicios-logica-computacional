@@ -1,0 +1,12 @@
+<script>
+    let palavra = prompt("Digite uma palavra para ver se é palíndromo: ").toUpperCase().trim();
+    function verificar(palavra) {
+        let palindromo = palavra.toUpperCase().split("").reverse().join("");
+    if (palavra == palindromo) {
+        document.write (`<h2>a palavra <u>${palavra}</u> é palindromo!</h2>`);
+    } else {
+        document.write (`<h2>a palavra <u>${palavra}</u> não é palindromo!</h2>`);
+    }
+}
+verificar(palavra);
+</script>

@@ -1,0 +1,36 @@
+<script>
+  // 24.	Um número é dito perfeito quando ele é igual a soma de seus fatores. Por exemplo, os fatores de 6 são 1, 2 e 3 (ou seja, podemos dividir 6 por 1, por 2 e por 3) e 6=1+2+3, logo 6 é um número perfeito. Escreva uma função que recebe um inteiro e dizer se é perfeito ou não. Em outra função, peça um inteiro n e mostre todos os números perfeitos até n.
+
+  // Entrada -> veririficaNumeroPerfeito(5), imprimeNumerosPerfeitosAteN(8128)
+  // Saída esperada -> “Não é número perfeito”, “6, 28, 486, 8128”
+  
+  let numero = parseInt(prompt("Digite um numero para ver se é perfeito: "));
+  let n = parseInt(prompt("Digite um numero para ver quantos inteiros tem até ele: "));
+  function veririficaNumeroPerfeito(numero) {
+    let soma = 0;
+    for (let i = 1; i < numero; i++) {
+      if (numero % i == 0) {
+        soma += i;
+      }
+    }
+
+    if (soma == numero) {
+      return "É um número perfeito!";
+    } else {
+      return "Não é um número perfeito!";
+    }
+  }
+
+  function imprimeNumerosPerfeitosAteN(n) {
+    let numerosPerfeitosAteN = [];
+    for (let i = 2; i <= n; i++) {
+      if (veririficaNumeroPerfeito(i) == "É um número perfeito!") {
+        numerosPerfeitosAteN.push(i);
+      }
+    }
+    return numerosPerfeitosAteN;
+  }
+
+  document.write(`<h2>${(veririficaNumeroPerfeito(numero))}</h2>`);
+  document.write(`<p><h2>${(imprimeNumerosPerfeitosAteN(n))}</h2></p>`);
+</script>
